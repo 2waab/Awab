@@ -88,7 +88,6 @@ ul {
 /* Start Header */
 .header {
 	background-color: var(--backgound-color);
-	box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
 }
 .header .container {
 	min-height: 60px;
@@ -200,8 +199,8 @@ ul {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		top: 80px;
-		width: 80%;
+		top: 60px;
+		width: 100%;
 		box-shadow: 0 4px 4px rgb(0, 0, 0, 0.1);
 		z-index: 10000;
 	}
@@ -216,7 +215,7 @@ ul {
 		display: none;
 	}
 	.header .links ul li a {
-		color: #aaa;
+		color: var(--text-color);
 		font-weight: 300;
 		font-size: 14px;
 	}
@@ -391,7 +390,6 @@ ul {
 	gap: 40px;
 }
 .skills .card {
-	background-color: var(--backgound-color);
 	box-shadow: 0 4px 4px rgb(0, 0, 0, 0.1);
 	text-align: center;
 	padding: 25px;
@@ -399,23 +397,32 @@ ul {
 	transition: var(--main-transition);
 	cursor: pointer;
 }
+.skills .card:first-child {
+	background-color: #ff2525;
+}
+.skills .card:nth-child(2) {
+	background-color: #0085c1;
+}
+.skills .card:last-child {
+	background-color: #ffc107;
+}
 .skills .card .icon {
 	width: 100%;
 }
 .skills .card .icon i {
 	font-size: 150px;
-	color: #c9c9c9;
+	color: #fff;
 	transition: var(--main-transition);
 }
 .skills .card:hover {
 	transform: translateY(-10px);
 	box-shadow: 0 4px 4px rgb(0, 0, 0, 0.3);
 }
-.skills .card:first-child:hover .icon i,
-.skills .card:nth-child(2):hover .icon i {
+.skills .card:first-child .icon i,
+.skills .card:nth-child(2) .icon i {
 	color: #fff;
 }
-.skills .card:last-child:hover .icon i {
+.skills .card:last-child .icon i {
 	color: var(--text-color);
 }
 .skills .card:first-child:hover {
@@ -432,15 +439,11 @@ ul {
 	font-size: 40px;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: #c9c9c9;
+	color: #fff;
 	transition: var(--main-transition);
 }
-.skills .card:last-child:hover .text {
+.skills .card:last-child .text {
 	color: var(--text-color);
-}
-.skills .card:first-child:hover .text,
-.skills .card:nth-child(2):hover .text {
-	color: #fff;
 }
 /* End Skills */
 /* Start Project */
@@ -879,6 +882,37 @@ color: #fff;
 	display: block;
 	color: var(--text-color);
 	font-size: 50px;
+	transition: var(--main-transition);
+}
+.social .text .column-1 div:first-child:hover {
+	background-color: #fff;
+}
+.social .text .column-1 div:nth-child(2):hover {
+	background-color: #ff005b;
+}
+.social .text .column-1 div:nth-child(2):hover i {
+	color: #fff;
+}
+.social .text .column-1 div:last-child:hover {
+	background-color: #0075ff;
+}
+.social .text .column-1 div:last-child:hover i {
+	color: #fff;
+}
+.social .text .column-2 div:first-child:hover {
+	background-color: #f19f1a;
+}
+.social .text .column-2 div:nth-child(2):hover {
+	background-color: #00f;
+}
+.social .text .column-2 div:nth-child(2):hover i {
+color: #fff;
+}
+.social .text .column-2 div:last-child:hover {
+	background-color: #00ff5b;
+}
+.social .text .column-2 div:last-child:hover i {
+	color: #fff;
 }
 @media (max-width: 991px) {
 	.social .container {
